@@ -1,3 +1,6 @@
+body {
+  background-color: hsl(270deg, 20%, 96%);
+}
 body h1,
 body p,
 body span {
@@ -5,16 +8,24 @@ body span {
   padding: 0;
 }
 
+.card-bg {
+  background-color: hsl(270deg, 20%, 96%);
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 .card {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
+  justify-items: center;
+  align-items: center;
+  height: 100vh;
 }
 .card .card__chat {
   position: relative;
   width: 375px;
+  border: 10px solid #fff;
+  border-radius: 32px;
 }
 .card .card__chat .header {
   display: flex;
@@ -23,6 +34,7 @@ body span {
   gap: 20px;
   background-image: linear-gradient(to right, hsl(264deg, 100%, 61%), hsl(293deg, 100%, 63%));
   height: 80px;
+  border-radius: 20px 20px 0 0;
 }
 .card .card__chat [class^=ph-] {
   color: #fff;
@@ -49,6 +61,7 @@ body span {
   gap: 10px;
   padding: 30px;
   background-color: hsl(270deg, 20%, 96%);
+  border-radius: 0 0 20px 20px;
 }
 .card .card__chat .body .text-1 {
   display: flex;
@@ -87,9 +100,9 @@ body span {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 170px;
 }
 .card .card__chat .body .text-3 span {
+  max-width: 150px;
   padding: 11px 14px;
   background-color: hsl(276deg, 100%, 81%);
   color: hsl(276deg, 55%, 52%);
@@ -100,15 +113,35 @@ body span {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  max-width: 220px;
+}
+.card .card__chat .body .text-3 .walk p {
+  background-image: linear-gradient(to right, hsl(293deg, 100%, 63%), hsl(264deg, 100%, 61%));
+  padding: 11px 14px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: hsl(270deg, 20%, 96%);
+}
+.card .card__chat .body .text-3 .walk p strong {
+  font-size: 14px;
+  color: #fff;
+}
+.card .card__chat .body form {
+  max-width: 300px;
+}
+.card .card__chat .body form input {
+  width: 100%;
+  padding: 12px 0 12px 24px;
+  border-radius: 32px;
+  border: 0;
+}
+.card .card__chat .body form input:focus-visible {
+  outline: none;
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228deg, 45%, 44%);
-}
 .attribution a {
   color: hsl(276deg, 100%, 81%);
   color: hsl(276deg, 55%, 52%);
