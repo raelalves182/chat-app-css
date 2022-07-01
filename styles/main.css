@@ -1,5 +1,6 @@
 body {
   background-color: hsl(270deg, 20%, 96%);
+  font-family: "Rubik", sans-serif;
 }
 body h1,
 body p,
@@ -9,7 +10,6 @@ body span {
 }
 
 .card-bg {
-  background-color: hsl(270deg, 20%, 96%);
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -19,6 +19,8 @@ body span {
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
   height: 100vh;
 }
 .card .card__chat {
@@ -26,6 +28,7 @@ body span {
   width: 375px;
   border: 10px solid #fff;
   border-radius: 32px;
+  box-shadow: 0px 30px 100px hsl(206deg, 6%, 79%);
 }
 .card .card__chat .header {
   display: flex;
@@ -140,6 +143,20 @@ body span {
 }
 .card .card__chat .body form input:focus-visible {
   outline: none;
+}
+.card .content {
+  display: grid;
+  gap: 20px;
+  max-width: 44ch;
+}
+.card .content h1 {
+  font-size: 50px;
+  font-weight: 500;
+  color: hsl(271deg, 36%, 24%);
+}
+.card .content p {
+  line-height: 30px;
+  color: hsl(270deg, 7%, 64%);
 }
 
 .attribution a {
