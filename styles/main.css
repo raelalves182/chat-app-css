@@ -1,3 +1,10 @@
+body h1,
+body p,
+body span {
+  margin: 0;
+  padding: 0;
+}
+
 .card {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -5,8 +12,94 @@
   margin-left: auto;
   margin-right: auto;
 }
-.card__header {
+.card .card__chat {
+  position: relative;
+  width: 375px;
+}
+.card .card__chat .header {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-image: linear-gradient(to right, hsl(264deg, 100%, 61%), hsl(293deg, 100%, 63%));
+  height: 80px;
+}
+.card .card__chat [class^=ph-] {
+  color: #fff;
+}
+.card .card__chat img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.card .card__chat .name {
+  flex: 0 50%;
+}
+.card .card__chat .name h1 {
+  color: #fff;
+  font-size: 16px;
+}
+.card .card__chat .name span {
+  color: hsl(276deg, 100%, 81%);
+  font-size: 12px;
+}
+.card .card__chat .body {
+  display: grid;
+  gap: 10px;
+  padding: 30px;
+  background-color: hsl(270deg, 20%, 96%);
+}
+.card .card__chat .body .text-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 170px;
+}
+.card .card__chat .body .text-1 span {
+  padding: 11px 14px;
+  background-color: hsl(276deg, 100%, 81%);
+  color: hsl(276deg, 55%, 52%);
+  font-size: 12px;
+  border-radius: 10px;
+}
+.card .card__chat .body .text-2 {
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  gap: 10px;
+}
+.card .card__chat .body .text-2 img {
+  border-radius: 16px;
+  width: 60px;
+  height: 70px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card .card__chat .body .text-2 span {
+  max-width: 160px;
+  background-color: #fff;
+  color: hsl(271deg, 15%, 43%);
+  padding: 11px 14px;
+  border-radius: 10px;
+}
+.card .card__chat .body .text-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 170px;
+}
+.card .card__chat .body .text-3 span {
+  padding: 11px 14px;
+  background-color: hsl(276deg, 100%, 81%);
+  color: hsl(276deg, 55%, 52%);
+  font-size: 12px;
+  border-radius: 10px;
+}
+.card .card__chat .body .text-3 .walk {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .attribution {
@@ -15,4 +108,18 @@
 }
 .attribution a {
   color: hsl(228deg, 45%, 44%);
+}
+.attribution a {
+  color: hsl(276deg, 100%, 81%);
+  color: hsl(276deg, 55%, 52%);
+  color: hsl(271deg, 15%, 43%);
+  color: hsl(206deg, 6%, 79%);
+  color: hsl(271deg, 36%, 24%);
+  color: hsl(270deg, 7%, 64%);
+  color: hsl(293deg, 100%, 63%);
+  color: hsl(264deg, 100%, 61%);
+  color: hsl(0deg, 0%, 100%);
+  color: hsl(270deg, 20%, 96%);
+  color: hsl(271deg, 36%, 24%);
+  color: hsl(289deg, 100%, 72%);
 }/*# sourceMappingURL=main.css.map */
