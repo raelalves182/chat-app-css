@@ -78,6 +78,7 @@ body span {
   color: hsl(276deg, 55%, 52%);
   font-size: 12px;
   border-radius: 10px;
+  line-height: 16px;
 }
 .card .card__chat .body .text-2 {
   display: flex;
@@ -98,6 +99,8 @@ body span {
   color: hsl(271deg, 15%, 43%);
   padding: 11px 14px;
   border-radius: 10px;
+  font-size: 12px;
+  line-height: 16px;
 }
 .card .card__chat .body .text-3 {
   display: flex;
@@ -111,6 +114,7 @@ body span {
   color: hsl(276deg, 55%, 52%);
   font-size: 12px;
   border-radius: 10px;
+  line-height: 16px;
 }
 .card .card__chat .body .text-3 .walk {
   display: flex;
@@ -133,16 +137,29 @@ body span {
   color: #fff;
 }
 .card .card__chat .body form {
-  max-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 290px;
+  width: 100%;
+  border-radius: 32px;
+  padding: 5px 5px 5px 20px;
+  background: #fff;
 }
 .card .card__chat .body form input {
-  width: 100%;
-  padding: 12px 0 12px 24px;
-  border-radius: 32px;
   border: 0;
 }
 .card .card__chat .body form input:focus-visible {
   outline: none;
+}
+.card .card__chat .body form button {
+  display: flex;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  background: hsl(271deg, 36%, 24%);
+  border-radius: 32px;
+  border: 0;
 }
 .card .content {
   display: grid;
