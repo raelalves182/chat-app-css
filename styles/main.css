@@ -12,20 +12,24 @@ body span {
 .card-bg {
   max-width: 1440px;
   margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .card {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   justify-items: center;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
   height: 100vh;
+  gap: 20px;
 }
 .card .card__chat {
   position: relative;
-  width: 375px;
+  max-width: 375px;
+  width: 100%;
   border: 10px solid #fff;
   border-radius: 32px;
   box-shadow: 0px 30px 100px hsl(206deg, 6%, 79%);
@@ -38,26 +42,44 @@ body span {
   background-image: linear-gradient(to right, hsl(264deg, 100%, 61%), hsl(293deg, 100%, 63%));
   height: 80px;
   border-radius: 20px 20px 0 0;
+  position: relative;
+}
+.card .card__chat .header__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 20px;
+}
+.card .card__chat .header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  background: #fff;
+  width: 180px;
+  height: 15px;
+  border-radius: 0px 0px 15px 15px;
 }
 .card .card__chat [class^=ph-] {
   color: #fff;
 }
 .card .card__chat img {
-  width: 40px;
-  height: 40px;
+  max-width: 30px;
+  width: 100%;
   border-radius: 50%;
   border: 2px solid #fff;
 }
 .card .card__chat .name {
-  flex: 0 50%;
+  flex: 0 70%;
 }
 .card .card__chat .name h1 {
   color: #fff;
-  font-size: 16px;
+  font-size: 14px;
 }
 .card .card__chat .name span {
   color: hsl(276deg, 100%, 81%);
-  font-size: 12px;
+  font-size: 10px;
 }
 .card .card__chat .body {
   display: grid;
@@ -70,14 +92,15 @@ body span {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 170px;
+  max-width: 200px;
+  width: 100%;
 }
 .card .card__chat .body .text-1 span {
   padding: 11px 14px;
-  background-color: hsl(276deg, 100%, 81%);
+  background-color: #eee0f7;
   color: hsl(276deg, 55%, 52%);
   font-size: 12px;
-  border-radius: 10px;
+  border-radius: 15px 10px 10px 5px;
   line-height: 16px;
 }
 .card .card__chat .body .text-2 {
@@ -88,17 +111,17 @@ body span {
 }
 .card .card__chat .body .text-2 img {
   border-radius: 16px;
-  width: 60px;
-  height: 70px;
+  width: 100%;
+  max-width: 65px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .card .card__chat .body .text-2 span {
-  max-width: 160px;
+  max-width: 170px;
   background-color: #fff;
   color: hsl(271deg, 15%, 43%);
   padding: 11px 14px;
-  border-radius: 10px;
+  border-radius: 10px 15px 5px 10px;
   font-size: 12px;
   line-height: 16px;
 }
@@ -108,12 +131,13 @@ body span {
   gap: 10px;
 }
 .card .card__chat .body .text-3 span {
-  max-width: 150px;
+  max-width: 200px;
+  width: 100%;
   padding: 11px 14px;
-  background-color: hsl(276deg, 100%, 81%);
+  background-color: #eee0f7;
   color: hsl(276deg, 55%, 52%);
   font-size: 12px;
-  border-radius: 10px;
+  border-radius: 15px 10px 10px 5px;
   line-height: 16px;
 }
 .card .card__chat .body .text-3 .walk {
@@ -125,7 +149,7 @@ body span {
 .card .card__chat .body .text-3 .walk p {
   background-image: linear-gradient(to right, hsl(293deg, 100%, 63%), hsl(264deg, 100%, 61%));
   padding: 11px 14px;
-  border-radius: 10px;
+  border-radius: 15px 10px 10px 5px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -139,18 +163,19 @@ body span {
   line-height: 0;
 }
 .card .card__chat .body .text-3 .walk p strong {
-  font-size: 14px;
+  font-size: 16px;
   color: #fff;
 }
 .card .card__chat .body form {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 290px;
+  max-width: 330px;
   width: 100%;
   border-radius: 32px;
-  padding: 5px 5px 5px 20px;
+  padding: 8px 5px 8px 20px;
   background: #fff;
+  margin-top: 5px;
 }
 .card .card__chat .body form input {
   border: 0;
@@ -158,11 +183,21 @@ body span {
 .card .card__chat .body form input:focus-visible {
   outline: none;
 }
+.card .card__chat .body form input::-moz-placeholder {
+  font-size: 10px;
+}
+.card .card__chat .body form input:-ms-input-placeholder {
+  font-size: 10px;
+}
+.card .card__chat .body form input::placeholder {
+  font-size: 10px;
+}
 .card .card__chat .body form button {
   display: flex;
   align-items: center;
-  width: 24px;
-  height: 24px;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
   background: hsl(271deg, 36%, 24%);
   border-radius: 32px;
   border: 0;
@@ -182,6 +217,26 @@ body span {
   color: hsl(270deg, 7%, 64%);
 }
 
+@media (max-width: 768px) {
+  .card {
+    grid-template-columns: 1fr;
+    gap: 0px;
+  }
+  .card .content {
+    text-align: center;
+  }
+  .card .content h1 {
+    font-size: 40px;
+  }
+  .card .content p {
+    line-height: 24px;
+  }
+}
+@media (max-width: 425px) {
+  .card .card__chat .body form {
+    width: auto;
+  }
+}
 .attribution a {
   color: hsl(276deg, 100%, 81%);
   color: hsl(276deg, 55%, 52%);

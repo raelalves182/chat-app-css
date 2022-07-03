@@ -15,20 +15,24 @@ body {
 .card-bg {
   max-width: 1440px;
   margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .card {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   justify-items: center;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
   height: 100vh;
+  gap: 20px;
 
   .card__chat {
     position: relative;
-    width: 375px;
+    max-width: 375px;
+    width: 100%;
     border: 10px solid #fff;
     border-radius: 32px;
     box-shadow: 0px 30px 100px hsl(206, 6%, 79%);
@@ -41,6 +45,26 @@ body {
       background-image: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
       height: 80px;
       border-radius: 20px 20px 0 0;
+      position: relative;
+
+      &__menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 300px;
+        margin-top: 20px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        background: #fff;
+        width: 180px;
+        height: 15px;
+        border-radius: 0px 0px 15px 15px;
+      }
     }
 
     [class^="ph-"] {
@@ -48,23 +72,23 @@ body {
     }
   
     img {
-      width: 40px;
-      height: 40px;
+      max-width: 30px;
+      width: 100%;
       border-radius: 50%;
       border: 2px solid #fff;
     }
   
     .name {
-      flex: 0 50%;
+      flex: 0 70%;
 
       h1 {
         color: #fff;
-        font-size: 16px;
+        font-size: 14px;
       }
   
       span {
         color: hsl(276, 100%, 81%);
-        font-size: 12px;
+        font-size: 10px;
       }
     }
 
@@ -79,14 +103,15 @@ body {
         display: flex;
         flex-direction: column;
         gap: 10px;
-        max-width: 170px;
+        max-width: 200px;
+        width: 100%;
 
         span {
           padding: 11px 14px;
-          background-color: hsl(276, 100%, 81%);
+          background-color: #eee0f7;
           color: hsl(276, 55%, 52%);
           font-size: 12px;
-          border-radius: 10px;
+          border-radius: 15px 10px 10px 5px;
           line-height: 16px;
         }
       }
@@ -99,17 +124,17 @@ body {
 
         img {
           border-radius: 16px;
-          width: 60px;
-          height: 70px;
+          width: 100%;
+          max-width: 65px;
           object-fit: cover;
         }
 
         span {
-          max-width: 160px;
+          max-width: 170px;
           background-color: #fff;
           color: hsl(271, 15%, 43%);
           padding: 11px 14px;
-          border-radius: 10px;
+          border-radius: 10px 15px 5px 10px;
           font-size: 12px;
           line-height: 16px;
         }
@@ -121,12 +146,13 @@ body {
         gap: 10px;
         
         span {
-          max-width: 150px;
+          max-width: 200px;
+          width: 100%;
           padding: 11px 14px;
-          background-color: hsl(276, 100%, 81%);
+          background-color: #eee0f7;
           color: hsl(276, 55%, 52%);
           font-size: 12px;
-          border-radius: 10px;
+          border-radius: 15px 10px 10px 5px;
           line-height: 16px;
         }
 
@@ -139,7 +165,7 @@ body {
           p {
             background-image: linear-gradient(to right, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
             padding: 11px 14px;
-            border-radius: 10px;
+            border-radius: 15px 10px 10px 5px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -154,7 +180,7 @@ body {
             }
 
             strong {
-              font-size: 14px;
+              font-size: 16px;
               color: #fff;
             }
           }
@@ -165,11 +191,12 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        max-width: 290px;
+        max-width: 330px;
         width: 100%;
         border-radius: 32px;
-        padding: 5px 5px 5px 20px;
+        padding: 8px 5px 8px 20px;
         background: #fff;
+        margin-top: 5px;
         
         input {
           border: 0;
@@ -177,13 +204,18 @@ body {
           &:focus-visible {
             outline: none;
           }
+
+          &::placeholder {
+            font-size: 10px;
+          }
         }
 
         button {
           display: flex;
           align-items: center;
-          width: 24px;
-          height: 24px;
+          justify-content: center;
+          width: 28px;
+          height: 28px;
           background: hsl(271, 36%, 24%);
           border-radius: 32px;
           border: 0;
@@ -208,8 +240,33 @@ body {
       color: hsl(270, 7%, 64%);
     }
   }
-
 }
+
+@media (max-width: 768px) {
+  .card {
+    grid-template-columns: 1fr;
+    gap: 0px;
+
+    .content {
+      text-align: center;
+
+      h1 {
+        font-size: 40px;
+      }
+
+      p {
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .card .card__chat .body form {
+    width: auto;
+  }
+}
+
 
 
 .attribution { 
