@@ -220,7 +220,7 @@ body span {
 @media (max-width: 768px) {
   .card {
     grid-template-columns: 1fr;
-    gap: 0px;
+    gap: 80px;
   }
   .card .content {
     text-align: center;
@@ -236,18 +236,4 @@ body span {
   .card .card__chat .body form {
     width: auto;
   }
-}
-.attribution a {
-  color: hsl(276deg, 100%, 81%);
-  color: hsl(276deg, 55%, 52%);
-  color: hsl(271deg, 15%, 43%);
-  color: hsl(206deg, 6%, 79%);
-  color: hsl(271deg, 36%, 24%);
-  color: hsl(270deg, 7%, 64%);
-  color: hsl(293deg, 100%, 63%);
-  color: hsl(264deg, 100%, 61%);
-  color: hsl(0deg, 0%, 100%);
-  color: hsl(270deg, 20%, 96%);
-  color: hsl(271deg, 36%, 24%);
-  color: hsl(289deg, 100%, 72%);
 }/*# sourceMappingURL=main.css.map */
