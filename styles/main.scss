@@ -146,7 +146,7 @@ body {
         gap: 10px;
         
         span {
-          max-width: 200px;
+          max-width: 170px;
           width: 100%;
           padding: 11px 14px;
           background-color: #eee0f7;
@@ -219,6 +219,7 @@ body {
           background: hsl(271, 36%, 24%);
           border-radius: 32px;
           border: 0;
+          cursor: pointer;
         }
       }
     }
